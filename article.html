@@ -32,7 +32,7 @@
 			<li><a href="#" title="Facebook" class="social__item__link _facebook">Facebook</a></li>
 			<li><a href="#" title="Twitter" class="social__item__link _twitter">Twitter</a></li>
 		</ul>
-		<a href="#" class="btn panel-top__brief">SEND BRIEF</a>
+		<a href="#" class="btn panel-top__brief js-popup-door" data-popup="form-brief">SEND BRIEF</a>
 		<a href="#" class="panel-top__lang">ENG</a>
 	</div>
 	<div class="page">
@@ -77,6 +77,7 @@
 			</a>
 		</div>
 		<div class="grid"><img src="./images/pic1.jpg" alt="" /></div>
+		<!--article-->
 		<div class="article">
 			<div class="article__text">
 				<div class="article__text__in">
@@ -178,8 +179,81 @@
 					</p>
 				</div>
 			</div>
-
 		</div>
+		<!--/article-->
+		<!---->
+		<div class="projects-list">
+			<div class="projects-list__header">
+				<div class="projects-list__header__title">PROJECTS YOU MAY ALSO LIKE </div>
+				<a href="#" class="arrow _prev">
+					<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+						<title>Path 181</title>
+						<desc>Created with Sketch.</desc>
+						<defs></defs>
+						<g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="Article" transform="translate(-28.000000, -155.000000)" stroke-width="2" stroke="#ffffff">
+								<g id="Link-with-a-Chevron" transform="translate(30.000000, 155.000000)">
+									<polyline id="Path-181" transform="translate(3.619767, 8.239534) rotate(-180.000000) translate(-3.619767, -8.239534) " points="1.13686838e-13 1 7.23953434 8.44188341 1.13686838e-13 15.4790687"></polyline>
+								</g>
+							</g>
+						</g>
+					</svg>
+					PREVIOUS PROJECT
+				</a>
+				<a href="#" class="arrow _next">
+					<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+						<title>Path 181</title>
+						<desc>Created with Sketch.</desc>
+						<defs></defs>
+						<g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="Article" transform="translate(-1241.000000, -155.000000)" stroke-width="2" stroke="#ffffff">
+								<g id="Link-with-a-Chevron" transform="translate(1126.000000, 155.000000)">
+									<polyline id="Path-181" points="116 1 123.239534 8.44188341 116 15.4790687"></polyline>
+								</g>
+							</g>
+						</g>
+					</svg>
+					NEXT  PROJECT
+				</a>
+			</div>
+			<div class="grid _col4">
+				<a href="#" class="grid__col">
+					<div class="grid__col__img"><img src="./images/pic4.jpg" alt="" /></div>
+					<div class="grid__in">
+						<div class="grid__in__frame">
+							<div class="grid__in__frame__col">World on our shoulder</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="grid__col">
+					<div class="grid__col__img"><img src="./images/pic5.jpg" alt="" /></div>
+					<div class="grid__in">
+						<div class="grid__in__frame">
+							<div class="grid__in__frame__col">New looks on London city</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="grid__col">
+					<div class="grid__col__img"><img src="./images/pic6.jpg" alt="" /></div>
+					<div class="grid__in">
+						<div class="grid__in__frame">
+							<div class="grid__in__frame__col">Knight from Dark Side</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="grid__col">
+					<div class="grid__col__img"><img src="./images/pic7.jpg" alt="" /></div>
+					<div class="grid__in">
+						<div class="grid__in__frame">
+							<div class="grid__in__frame__col">Computer science</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!--/-->
 
 
 	</div>
@@ -191,5 +265,30 @@
 			<div class="footer__item _follow">FOLLOW US ON <a href="#">FACEBOOK</a>, <a href="#">BEHANCE</a> AND <a href="#">INSTAGRAM</a></div>
 		</div>
 	</div>
+<!--popup-->
+	<div class="popup js-popup" data-popup="form-brief">
+		<div class="popup__frame">
+			<div class="popup__close js-popup-close" title="Close">Close</div>
+			<form action="#" class="form">
+				<div class="form__row _col2">
+					<div class="form__row__col"><input type="text" name="email" id="email" class="form__field" placeholder="E-MAIL" /></div>
+					<div class="form__row__col">
+
+						<div class="form__file js-form-file">
+							<div class="form__file__btn">
+								<input type="file" class="form__file__btn__field js-form-file-input" name="file" id="file" />
+								<i class="form__file__btn__add">ATTACH</i>
+							</div>
+							<div class="form__file__name js-form-file-name" data-empty="ATTACH FILE">ATTACH FILE</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="form__row"><textarea name="description" id="description" cols="30" rows="10" class="form__textarea" placeholder="WRITE SHORT DESCRIPTION"></textarea></div>
+				<div class="form__row _button"><input type="submit" value="Send" class="btn" /></div>
+			</form>
+		</div>
+	</div>
+<!--/popup-->
 </body>
 </html>
