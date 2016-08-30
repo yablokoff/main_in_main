@@ -103,7 +103,7 @@ img, fieldset { border:0 none; }
 
 
 .panel-top {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -112,6 +112,8 @@ img, fieldset { border:0 none; }
 	z-index: 1000;
 	background: #ffffff;
 }
+
+.panel-top._fixed { position: fixed; }
 
 .panel-top__menu {
 	font-size: 0;
@@ -285,8 +287,8 @@ img, fieldset { border:0 none; }
 .page {
 	min-width: 990px;
 	min-height: 100%;
-	margin-bottom: -59px;
-	padding: 123px 0 59px 0;
+	margin-bottom: -233px;
+	padding: 123px 0 233px 0;
 	box-sizing: border-box;
 }
 .page__header {
@@ -321,6 +323,33 @@ img, fieldset { border:0 none; }
 }
 
 .page__header__menu a:hover { color: #231f20; }
+
+.page__header._active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 86px;
+	padding: 0;
+	background: #ffffff;
+	border-bottom: 1px solid #ebebeb;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+.page__header._active .arrow { display: none; }
+.page__header._active h1 {
+	font-size: 25px;
+	line-height: 25px;
+	text-align: left;
+	padding: 29px 0 0 30px;
+}
+.page__header._active .page__header__menu {
+	position: absolute;
+	top: 16px;
+	right: 0;
+}
+
 
 .arrow {
 	position: absolute;
@@ -410,8 +439,7 @@ a.grid__col:hover img {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	padding: 0 45px;
-	font: 30px/37px 'Geometria_Bold';
+	padding: 0 25px;
 	box-sizing: border-box;
 }
 
@@ -419,6 +447,38 @@ a.grid__col:hover img {
 	font: 52px/52px 'Geometria_Bold';
 	margin-bottom: 29px;
 }
+
+.grid__in__frame__col__title { font: 30px/37px 'Geometria_Bold'; }
+.grid__in__frame__col__txt {
+	display: none;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1.4px;
+	padding-top: 16px;
+	max-width: 350px;
+	margin: 0 auto;
+	max-height: 130px;
+	overflow: hidden;
+}
+
+.grid__in__frame__col__creator {
+	display: none;
+	position: absolute;
+	top: 19px;
+	left: 0;
+	width: 100%;
+	font-size: 12px;
+	line-height: 22px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+
+a.grid__col:hover .grid__in__frame__col__txt { display: block; }
+
+
 
 .logos-list { font-size: 0; }
 .logos-list__item {
@@ -587,18 +647,17 @@ a.grid__col:hover img {
 
 .footer {
 	min-width: 990px;
+	min-height: 233px;
 	font-size: 10px;
 	line-height: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	padding: 0 30px 0 30px;
-	height: 59px;
+	text-align: center;
+	padding: 30px 30px;
 	color: #d3d3d3;
 	background: #000000;
 	box-sizing: border-box;
 }
-
-.footer__in { position: relative; }
 
 .footer  a {
 	color: #fafafa;
@@ -608,34 +667,17 @@ a.grid__col:hover img {
 
 .footer  a:hover { text-decoration: underline; }
 
-.footer__item {
-	position: absolute;
-	top: 26px;
-}
 
 .footer__item._logo {
-	top: 15px;
-	left: 0;
-	width: 30px;
-	height: 30px;
+	margin: 0 auto;
+	width: 64px;
+	height: 64px;
 	background: url("../i/logo.png") no-repeat 0 0;
 	background-size: cover;
 }
-
-.footer__item._copy {
-	left: 5%;
-	width: 25%;
-}
-
-.footer__item._address {
-	left: 37%;
-	width: 26%;
-}
-
-.footer__item._follow {
-	right: 0;
-	width: 29%;
-}
+.footer__item._copy { margin-top: 30px; }
+.footer__item._address { margin-top: 8px; }
+.footer__item._follow { margin-top: 26px; }
 
 .popup {
 	display: none;
@@ -779,10 +821,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 
 .page404 { background: #000000; }
-.page404 .panel-top {
-	position: absolute;
-	background: #000000;
-}
+.page404 .panel-top { background: #000000; }
 .page404 .panel-top__menu > li,
 .page404 .panel-top__menu a { color: #ffffff; }
 
@@ -857,9 +896,33 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 .spacer { min-height: 250px; }
 
 
+.animate-box {
+	position: relative;
+	overflow: hidden;
+}
+
+.animate-box__block {
+	position: relative;
+	top: 100px;
+	opacity: 0;
+
+	transition: top 0.4s 0s, opacity 1s 0s;
+}
+
+.animate-box._animate .animate-box__block {
+	top: 0;
+	opacity: 1;
+}
+
+
+
+
+
 @media (min-width: 1150px) {
 
 	.panel-top__menu > li {
 		margin-right: 54px;
 	}
+
+	a.grid__col:hover .grid__in__frame__col__creator { display: block; }
 }

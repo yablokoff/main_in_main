@@ -1,5 +1,9 @@
 $( function() {
-	var $body = $('body');
+	var $window = $(window),
+	 	$body = $('body'),
+
+		cssClassActive = "_active"
+	;
 
 //form file
 	(function(){
@@ -38,6 +42,49 @@ $( function() {
 
 			$popup.hide();
 		}));
+
+	})();
+
+
+
+//animate blocks, header article
+	(function(){
+		var jsClassAnimate = ".js-animate",
+			cssClassAnimate = "_animate",
+
+			$blocks = $(jsClassAnimate),
+			$articleHeader = $('.js-scroll-header'),
+
+			top = 200,
+			articleHeaderOffset = $articleHeader.offset().top
+		;
+
+		$window.scroll(function(){
+			var windowTop = $window.scrollTop();
+
+			$blocks.each(function () {
+				var $block = $(this);
+
+				if (!$block.is(cssClassAnimate)) {
+					if (($block.offset().top - $body.height()+top) <= windowTop) {
+						$block.addClass(cssClassAnimate);
+					}
+				}
+
+			});
+
+
+			if ($articleHeader.length) {
+
+				if (windowTop > articleHeaderOffset) {
+					$articleHeader.addClass(cssClassActive);
+				} else {
+					$articleHeader.removeClass(cssClassActive);
+				}
+			}
+
+
+		});
 
 	})();
 
