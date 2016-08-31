@@ -32,7 +32,10 @@
 			<li><a href="#" title="Facebook" class="social__item__link _facebook">Facebook</a></li>
 			<li><a href="#" title="Twitter" class="social__item__link _twitter">Twitter</a></li>
 		</ul>
-		<a href="#" class="btn panel-top__brief js-popup-door" data-popup="form-brief">SEND BRIEF</a>
+		<a href="#" class="btn panel-top__brief animate-button js-animate-button js-popup-door" data-popup="form-brief">
+			<span class="animate-button__text">SEND BRIEF</span>
+			<span class="animate-button__text__scale js-animate-button-scale"></span>
+		</a>
 		<a href="#" class="panel-top__lang">ENG</a>
 	</div>
 	<div class="page">
@@ -79,7 +82,12 @@
 				</div>
 			</div>
 			<div class="form__row"><textarea name="description" id="description" cols="30" rows="10" class="form__textarea" placeholder="WRITE SHORT DESCRIPTION"></textarea></div>
-			<div class="form__row _button"><input type="submit" value="Send" class="btn" /></div>
+			<div class="form__row _button">
+				<button type="submit" class="btn animate-button js-animate-button">
+					<span class="animate-button__text">SEND BRIEF</span>
+					<span class="animate-button__text__scale js-animate-button-scale"></span>
+				</button>
+			</div>
 		</form>
 	</div>
 </div>

@@ -56,7 +56,7 @@ $( function() {
 			$articleHeader = $('.js-scroll-header'),
 
 			top = 200,
-			articleHeaderOffset = $articleHeader.offset().top
+			articleHeaderOffset = $articleHeader.length ? $articleHeader.offset().top : 0
 		;
 
 		$window.scroll(function(){
@@ -83,8 +83,25 @@ $( function() {
 				}
 			}
 
-
 		});
+
+	})();
+
+
+//animate button
+	(function(){
+
+		$body.on ("mouseenter", ".js-animate-button", (function(event){
+			var $btn = $(this),
+				offset = $btn.offset(),
+				posLeft = Math.round(event.pageX - offset.left),
+				posTop = Math.round(event.pageY - offset.top),
+
+				$scaleBox = $btn.find(".js-animate-button-scale")
+			;
+
+			$scaleBox.css({ left: posLeft, top: posTop });
+		}));
 
 	})();
 

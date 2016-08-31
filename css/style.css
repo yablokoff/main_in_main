@@ -80,7 +80,7 @@ img, fieldset { border:0 none; }
 
 .btn:hover {
 	color: #ffffff;
-	background: #231f20;
+	/*background: #231f20;*/
 }
 
 .btn._big {
@@ -97,8 +97,46 @@ img, fieldset { border:0 none; }
 .btn._white:hover {
 	color: #231f20;
 	border-color: #ffffff;
-	background: #ffffff;
+	/*background: #ffffff;*/
 }
+
+.animate-button {
+	position: relative;
+	overflow: hidden;
+
+	transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.animate-button__text {
+	position: relative;
+	z-index: 1;
+}
+
+.animate-button__text__scale {
+	position: absolute;
+	width: 220%;
+	height: 280px;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	background: #231f20;
+
+	transition: -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	-webkit-transform: translate(-50%, -50%) scale(0);
+	transform: translate(-50%, -50%) scale(0);
+	pointer-events: none;
+}
+
+.btn._white .animate-button__text__scale { background: #ffffff; }
+
+.btn:hover .animate-button__text__scale {
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 
 
@@ -830,10 +868,11 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	border-color: #ffffff;
 }
 
+.page404 .panel-top__brief .animate-button__text__scale { background: #ffffff; }
+
 .page404 .panel-top__brief:hover {
 	color: #231f20;
 	border-color: #ffffff;
-	background: #ffffff;
 }
 
 .page404 .page { position: relative; }
@@ -841,7 +880,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 .page__404 {
 	position: absolute;
 	top: 123px;
-	bottom: 59px;
+	bottom: 233px;
 	left: 0;
 	right: 0;
 }
