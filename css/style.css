@@ -710,7 +710,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	margin: 0 auto;
 	width: 64px;
 	height: 64px;
-	background: url("../i/logo.png") no-repeat 0 0;
+	background: url("../i/logo.svg") no-repeat 0 0;
 	background-size: cover;
 }
 .footer__item._copy { margin-top: 30px; }
@@ -754,7 +754,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	width: 21px;
 	height: 21px;
 	margin: -10px 0 0 -10px;
-	background: gray;
+	background: url("../i/close.svg") no-repeat 0 0;
 }
 
 .form__row { margin-top: 40px; }
@@ -843,7 +843,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	right: 0;
 	width: 16px;
 	height: 16px;
-	background: gray;
+	background: url("../i/cross.svg") no-repeat 0 0;
 }
 
 .form__file__name {
