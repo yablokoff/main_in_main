@@ -214,21 +214,7 @@ img, fieldset { border:0 none; }
 .panel-top__menu > li:hover ul { display: block; }
 
 
-.panel-top__logo {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 73px;
-	height: 73px;
-	margin: -36px 0 0 -36px;
-}
 
-.panel-top__logo img {
-	display: block;
-	width: 73px;
-	height: 73px;
-}
 
 .panel-top__lang {
 	position: absolute;
@@ -247,6 +233,67 @@ img, fieldset { border:0 none; }
 	position: absolute;
 	top: 47px;
 	right: 90px;
+}
+
+
+.panel-top__logo {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 73px;
+	height: 73px;
+	margin: -36px 0 0 -36px;
+
+	perspective: 1000px;
+
+	cursor: pointer;
+}
+
+.panel-top__logo img {
+	display: block;
+	width: 73px;
+	height: 73px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	backface-visibility: hidden;
+}
+
+.panel-top__logo img._back {
+
+	transform: rotateY( 180deg );
+}
+
+.panel-top__logo__box {
+	display: block;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+
+.panel-top__logo:hover .panel-top__logo__box:hover {
+	animation: rotate 0.6s infinite linear 0.2s;
+}
+
+
+@-moz-keyframes rotate {
+	from {-moz-transform:  rotate(0);}
+	to {-moz-transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate{
+	from {-webkit-transform:  rotate(0);}
+	to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes rotate{
+	from {
+		transform: rotateY(0);
+	}
+	to {
+		transform: rotateY( 360deg );
+	}
 }
 
 .social {
@@ -710,7 +757,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	margin: 0 auto;
 	width: 64px;
 	height: 64px;
-	background: url("../i/logo.svg") no-repeat 0 0;
+	background: url("../i/logo_black.svg") no-repeat 0 0;
 	background-size: cover;
 }
 .footer__item._copy { margin-top: 30px; }
