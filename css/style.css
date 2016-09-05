@@ -435,6 +435,22 @@ img, fieldset { border:0 none; }
 	right: 0;
 }
 
+.page__header__progress {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.page__header__progress__bar {
+	width: 0;
+	height: 3px;
+	background: #1e1e1e;
+}
+
+.page__header._active .page__header__progress { display: block; }
+
 
 .arrow {
 	position: absolute;
@@ -884,7 +900,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	cursor: pointer;
 }
 
-.form__file__btn__add {
+.form__file__btn__ic {
 	position: absolute;
 	top: -1px;
 	right: 0;
@@ -898,6 +914,18 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+.form__file._active .form__file__name {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #00d994;
+}
+.form__file._active .form__file__btn__ic {
+	top: 3px;
+	width: 13px;
+	height: 11px;
+	background: url("../i/delete.svg") no-repeat 0 0;
+}
+
 
 .form .btn {
 	padding: 12px 20px 13px 20px;

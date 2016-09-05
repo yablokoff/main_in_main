@@ -11,10 +11,12 @@ $( function() {
 
 		$fileBox.on ("change", ".js-form-file-input", (function(){
 			var $input = $(this),
-				$filePathBox = $input.closest(".js-form-file").find(".js-form-file-name"),
+				$box = $input.closest(".js-form-file"),
+				$filePathBox = $box.find(".js-form-file-name"),
 				value = $input.val() ? $input.val() : $filePathBox.attr("data-empty")
 			;
 
+			$box.toggleClass(cssClassActive, !!$input.val());
 			$filePathBox.text(value);
 
 		}));
@@ -56,7 +58,10 @@ $( function() {
 			$articleHeader = $('.js-scroll-header'),
 
 			top = 200,
-			articleHeaderOffset = $articleHeader.length ? $articleHeader.offset().top : 0
+			articleHeaderOffset = $articleHeader.length ? $articleHeader.offset().top : 0,
+
+			$progressBar = $('.js-progress-bar'),
+			progressBarWidth = 0
 		;
 
 		$window.scroll(function(){
@@ -81,6 +86,10 @@ $( function() {
 				} else {
 					$articleHeader.removeClass(cssClassActive);
 				}
+
+				progressBarWidth = windowTop / ($(document).height() - $(window).height());
+				$progressBar.css({ "width": (100 * progressBarWidth | 0) + "%"});
+
 			}
 
 		});
