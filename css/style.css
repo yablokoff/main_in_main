@@ -57,6 +57,11 @@ body { font: 18px/30px 'Geometria', sans-serif;  color:#231f20; background:#ffff
 
 h1, h2, h3, h4, h5, h6 { margin:0; padding:0; font-weight: normal; }
 
+h1 {
+	font: 50px/50px 'Geometria_Bold';
+	color: #231f20;
+}
+
 img, fieldset { border:0 none; }
 
 
@@ -344,6 +349,9 @@ img, fieldset { border:0 none; }
 .social__item__link._twitter { background: #00e1ff; }
 .social__item__link._twitter:after { content: "\62"; }
 
+.panel-top .social__item__link._facebook,
+.panel-top .social__item__link._twitter { background: #000000; }
+
 
 .social._share li {
 	display: block;
@@ -382,8 +390,6 @@ img, fieldset { border:0 none; }
 }
 
 .page__header h1 {
-	font: 50px/50px 'Geometria_Bold';
-	color: #231f20;
 	text-align: center;
 }
 
@@ -1006,7 +1012,6 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 .page__404__farme__in__item._txt { width: 41%; }
 
 
-
 .spacer { min-height: 250px; }
 
 
@@ -1028,7 +1033,42 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	opacity: 1;
 }
 
+.pageContact .page {
+	position: relative;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+}
 
+.page__contact {
+	margin-left: 11%;
+	width: 36%;
+	padding-top: 91px;
+}
+
+.page__contact__list { margin-top: 75px; }
+
+.page__contact__list dt {
+	font: 15px/30px 'Geometria_Bold';
+	color: #231f20;
+	text-transform: uppercase;
+	letter-spacing: 2.3px;
+	margin-bottom: 10px;
+}
+
+.page__contact__list dd { margin-bottom: 56px; }
+
+.page__contact__list a { color: #231f20; text-decoration: none; }
+.page__contact__list a:hover { text-decoration: underline; }
+
+
+.page__contact__map {
+	position: absolute;
+	top: 146px;
+	bottom: 0;
+	right: 0;
+	width: 53%;
+	overflow: hidden;
+}
 
 
 

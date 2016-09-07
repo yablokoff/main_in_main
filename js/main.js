@@ -87,7 +87,7 @@ $( function() {
 					$articleHeader.removeClass(cssClassActive);
 				}
 
-				progressBarWidth = windowTop / ($(document).height() - $(window).height());
+				progressBarWidth = windowTop / ($(document).height() - $window.height());
 				$progressBar.css({ "width": (100 * progressBarWidth | 0) + "%"});
 
 			}
