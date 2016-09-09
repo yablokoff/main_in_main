@@ -1,8 +1,6 @@
 $( function() {
 
-	if (ymaps) {
-		ymaps.ready(init);
-	}
+	ymaps.ready(init);
 
 	function init () {
 		var myMap = new ymaps.Map("map", {
