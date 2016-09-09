@@ -1069,8 +1069,22 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	right: 0;
 	width: 53%;
 	overflow: hidden;
+
+	/*border-top-left-radius: 100%;*/
 }
 
+.page__contact__map > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.ymaps-map { border-top-left-radius: 100%; }
 
 
 @media (min-width: 1150px) {
