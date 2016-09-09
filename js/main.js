@@ -57,6 +57,8 @@ $( function() {
 			$blocks = $(jsClassAnimate),
 			$articleHeader = $('.js-scroll-header'),
 
+			$panelTop = $('.js-panel-top'),
+
 			top = 200,
 			articleHeaderOffset = $articleHeader.length ? $articleHeader.offset().top : 0,
 
@@ -90,6 +92,12 @@ $( function() {
 				progressBarWidth = windowTop / ($(document).height() - $window.height());
 				$progressBar.css({ "width": (100 * progressBarWidth | 0) + "%"});
 
+			}
+
+			if (windowTop > 63) {
+				$panelTop.addClass(cssClassActive);
+			} else {
+				$panelTop.removeClass(cssClassActive);
 			}
 
 		});
