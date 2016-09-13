@@ -166,7 +166,7 @@ img, fieldset { border:0 none; }
 }
 .panel-top__menu > li {
 	display: inline-block;
-	margin-right: 3%;
+	margin-right: 30px;
 	font-size: 12px;
 	line-height: 14px;
 	letter-spacing: 1.8px;
@@ -617,7 +617,9 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	vertical-align: middle;
 }
 
-.article { margin: 0 10px; }
+.article,
+.about { margin: 0 10px; }
+
 .article__top {
 	position: fixed;
 	font-size: 0;
@@ -642,6 +644,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	position: relative;
 	margin: 60px 0 46px 0;
 }
+
 
 .article__text__in {
 	width: 63%;
@@ -688,7 +691,8 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	margin-bottom: 53px;
 }
 
-.article h2 {
+.article h2,
+.about h2 {
 	font: 15px/30px 'Geometria_Bold';
 	text-transform: uppercase;
 	letter-spacing: 2.3px;
@@ -1032,7 +1036,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 }
 
 .page__contact {
-	margin-left: 11%;
+	margin-left: 114px;
 	width: 36%;
 	padding-top: 14px;
 }
@@ -1101,14 +1105,37 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	animation: rotate 1.8s infinite linear;
 }
 
+.about__content {
+	margin: 60px 0 46px 104px;
+}
+.about__content._text {
+	width: 65%;
+	max-width: 813px;
+}
+
+.about__content:first-child { margin-top: 0; }
+
+.about__content h1 { margin-bottom: 75px; }
+
+.about__content__col { font-size: 0; }
+.about__content__col__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 31%;
+	max-width: 354px;
+	padding-right: 40px;
+	font-size: 18px;
+	box-sizing: border-box;
+}
 
 
 
 @media (min-width: 1150px) {
 
-	.panel-top__menu > li {
-		margin-right: 54px;
-	}
+	.panel-top__menu > li { margin-right: 54px; }
 
 	a.grid__col:hover .grid__in__frame__col__creator { display: block; }
+
+	.about__content { margin-left: 126px; }
+	.page__contact { margin-left: 136px; }
 }

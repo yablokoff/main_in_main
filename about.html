@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main in Main</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+	<script src="./js/jquery-2-1-0.min.js"></script>
+	<script src="./js/main.js"></script>
+
+</head>
+<body>
+	<a name="top"></a>
+	<div class="panel-top">
+		<a href="#" class="panel-top__logo"><img src="./i/logo_white.svg" alt="Main in Main" /></a>
+
+		<ul class="panel-top__menu">
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">PROJECTS</a></li>
+			<li class="_isSubMenu">
+				<a href="#">MORE</a>
+				<ul>
+					<li><a href="#">more 1</a></li>
+					<li><a href="#">more 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">CONTACTS</a></li>
+		</ul>
+		<ul class="social">
+			<li><a href="#" title="Facebook" class="social__item__link _facebook">Facebook</a></li>
+			<li><a href="#" title="Twitter" class="social__item__link _twitter">Twitter</a></li>
+		</ul>
+		<a href="#" class="btn panel-top__brief animate-button js-animate-button js-popup-door" data-popup="form-brief">
+			<span class="animate-button__text">SEND BRIEF</span>
+			<span class="animate-button__text__scale js-animate-button-scale"></span>
+		</a>
+		<a href="#" class="panel-top__lang">ENG</a>
+	</div>
+	<div class="page">
+		<!--about-->
+		<div class="about">
+			<div class="about__content _text">
+				<h1>About</h1>
+				<h2>WHO WE ARE</h2>
+				<p>Main In Main — это уникальная команда product, brand и digital разработчиков с сильной экспертизой в стратегии и дизайн-мышлении. Мы разрабатываем и совершенствуем системы дизайна, брендинга и коммуникаций, делая продукт востребованным, а образ бренда живым и привлекательным. Мы строим отношения на принципах надежного долгосрочного партнёрства. Мы проактивны и всегда стремимся помогать нашим клиентам быть на шаг впереди рынка.</p>
+			</div>
+			<div class="grid"><img src="./images/pic15.jpg" alt="" /></div>
+			<div class="about__content">
+				<div class="about__content__col">
+					<div class="about__content__col__item">
+						<h2>BRANDING</h2>
+						<p>
+							Исследования и бренд-стратегия<br />
+							Системы идентификации<br />
+							Дизайн продукта и упаковка<br />
+							Рекламные кампании
+						</p>
+					</div>
+					<div class="about__content__col__item">
+						<h2>DIGITAL</h2>
+						<p>
+							Исследования и аналитика<br />
+							Дизайн интерфейса<br />
+							Front-end и back-end разработка<br />
+							Техническая и дизайн поддержка
+						</p>
+					</div>
+					<div class="about__content__col__item">
+						<h2>MOBILE</h2>
+						<p>
+							Концепция продукта<br />
+							Дизайн интерфейса<br />
+							Запуск продукта
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/about-->
+
+	</div>
+	<div class="footer">
+		<div class="footer__in">
+			<div class="footer__item _logo"></div>
+			<div class="footer__item _copy">© 2016 MAIN IN MAIN.  ALL RIGHTS RESERVED.</div>
+			<div class="footer__item _address">ADRESS: 4TH SYROMYATNICHESKIY LANE, 1, BLD.L</div>
+			<div class="footer__item _follow">FOLLOW US ON <a href="#">FACEBOOK</a>, <a href="#">BEHANCE</a> AND <a href="#">INSTAGRAM</a></div>
+		</div>
+	</div>
+<!--popup-->
+	<div class="popup js-popup" data-popup="form-brief">
+		<div class="popup__frame">
+			<div class="popup__close js-popup-close" title="Close">Close</div>
+			<form action="#" class="form">
+				<div class="form__row _col2">
+					<div class="form__row__col"><input type="text" name="email" id="email" class="form__field" placeholder="E-MAIL" /></div>
+					<div class="form__row__col">
+
+						<div class="form__file js-form-file">
+							<div class="form__file__btn">
+								<input type="file" class="form__file__btn__field js-form-file-input" name="file" id="file" />
+								<i class="form__file__btn__add">ATTACH</i>
+							</div>
+							<div class="form__file__name js-form-file-name" data-empty="ATTACH FILE">ATTACH FILE</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="form__row"><textarea name="description" id="description" cols="30" rows="10" class="form__textarea" placeholder="WRITE SHORT DESCRIPTION"></textarea></div>
+				<div class="form__row _button">
+					<button type="submit" class="btn animate-button js-animate-button">
+						<span class="animate-button__text">SEND BRIEF</span>
+						<span class="animate-button__text__scale js-animate-button-scale"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+<!--/popup-->
+</body>
+</html>
