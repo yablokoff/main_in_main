@@ -3,6 +3,7 @@
 <head>
 <title>Main in Main</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<meta name="Keywords" content="" />
 	<meta name="Description" content="" />
@@ -14,32 +15,39 @@
 
 </head>
 <body>
-	<a name="top"></a>
 	<div class="panel-top">
+
 		<a href="#" class="panel-top__logo"><img src="./i/logo_white.svg" alt="Main in Main" /></a>
 
-		<ul class="panel-top__menu">
-			<li><a href="#">ABOUT</a></li>
-			<li><a href="#">PROJECTS</a></li>
-			<li class="_isSubMenu">
-				<a href="#">MORE</a>
-				<ul>
-					<li><a href="#">more 1</a></li>
-					<li><a href="#">more 2</a></li>
+		<div class="panel-top__frame js-frame">
+			<div class="panel-top__frame__door js-frame-door" data-text="close">menu</div>
+			<div class="panel-top__frame__content js-frame-content">
+				<ul class="panel-top__menu">
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">PROJECTS</a></li>
+					<li class="_isSubMenu">
+						<a href="#">MORE</a>
+						<ul>
+							<li><a href="#">more 1</a></li>
+							<li><a href="#">more 2</a></li>
+						</ul>
+					</li>
+					<li><a href="#">CONTACTS</a></li>
 				</ul>
-			</li>
-			<li><a href="#">CONTACTS</a></li>
-		</ul>
-		<ul class="social">
-			<li><a href="#" title="Facebook" class="social__item__link _facebook">Facebook</a></li>
-			<li><a href="#" title="Twitter" class="social__item__link _twitter">Twitter</a></li>
-		</ul>
-		<a href="#" class="btn panel-top__brief animate-button js-animate-button js-popup-door" data-popup="form-brief">
-			<span class="animate-button__text">SEND BRIEF</span>
-			<span class="animate-button__text__scale js-animate-button-scale"></span>
-		</a>
+				<a href="#" class="btn panel-top__brief animate-button js-animate-button js-popup-door" data-popup="form-brief">
+					<span class="animate-button__text">SEND BRIEF</span>
+					<span class="animate-button__text__scale js-animate-button-scale"></span>
+				</a>
+				<ul class="social">
+					<li><a href="#" title="Facebook" class="social__item__link _facebook">Facebook</a></li>
+					<li><a href="#" title="Twitter" class="social__item__link _twitter">Twitter</a></li>
+				</ul>
+			</div>
+		</div>
+
 		<a href="#" class="panel-top__lang">ENG</a>
 	</div>
+
 	<div class="page">
 		<!--about-->
 		<div class="about">

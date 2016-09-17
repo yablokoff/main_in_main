@@ -125,4 +125,23 @@ $( function() {
 
 	})();
 
+
+	//menu
+	(function(){
+		var $menuBox = $(".js-frame");
+
+
+		$menuBox.on ("click", ".js-frame-door", (function(){
+			var $door = $(this),
+				text = $door.attr("data-text"),
+				$box = $door.closest(".js-frame");
+
+			$door.attr("data-text", $door.text());
+			$door.text(text);
+			$box.toggleClass(cssClassActive);
+		}));
+
+
+	})();
+
 });
