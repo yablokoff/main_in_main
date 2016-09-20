@@ -579,6 +579,13 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	transition: opacity 0.8s 0s;
 }
 
+.article__top svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -14px;
+}
+
 .article__top._active { opacity: 1; }
 
 
@@ -939,6 +946,12 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	margin: 0 auto 26px auto;
 }
 
+.page__404__farme__in h1 {
+	font: 86px/86px 'Geometria';
+	color: #ffffff;
+	margin-bottom: 25px;
+}
+
 
 .spacer { min-height: 250px; }
 
@@ -1048,7 +1061,14 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 		line-height: 50px;
 	}
 
-	.page__header { padding-top: 14px; }
+	.page__header {
+		position: relative;
+		padding-top: 14px;
+		height: 126px;
+		box-sizing: border-box;
+
+		transition: height 0.6s 0s;
+	}
 
 	.arrow { top: 33px; }
 
@@ -1062,9 +1082,9 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	}
 	.page__header._active .page__header__menu {
 		position: absolute;
-		top: 16px;
+		bottom: 27px;
 		right: 0;
-		margin-top: 12px;
+		left: auto;
 	}
 
 	.article__text { margin: 60px 0 46px 0; }
