@@ -765,7 +765,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	margin: 0 auto;
 	width: 64px;
 	height: 64px;
-	background: url("../i/logo_white.svg") no-repeat 0 0;
+	background: url("../i/logo_black.svg") no-repeat 0 0;
 	background-size: cover;
 }
 .footer__item._copy { margin-top: 30px; }
@@ -997,32 +997,40 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	opacity: 1;
 }
 
-.pageContact .page {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
+.page__frame { margin: 0 10px; padding-bottom: 30px; }
+.page__frame h1,
+.page__frame h2 { text-align: center; }
 
-.page__contact { padding-top: 34px; margin: 0 30px; }
-.page__contact h1 { text-align: center; }
+.page__frame h1 { margin-bottom: 40px; }
+.page__frame h2 { margin-bottom: 26px; }
 
-.page__contact__list {
+
+.page__frame__text,
+.page__frame__list {
 	width: 62%;
 	max-width: 788px;
-	margin: 40px auto 0 auto;
+	margin: 0 auto
+}
+
+.page__frame__text { margin-bottom: 80px; }
+
+.page__frame__list {
 	font-size: 0;
 	padding: 20px 0 43px 0;
 	background: #fafafa;
 	box-sizing: border-box;
 }
 
-.page__contact__list h2 {
+.page__frame__list._shiftup { position: relative; margin-top: -86px; }
+
+.page__frame__list h2 {
 	text-align: center;
 	border-bottom: 2px solid #ededed;
 	padding-bottom: 16px;
 	margin-bottom: 26px;
 }
 
-.page__contact__list__col {
+.page__frame__list__col {
 	display: inline-block;
 	vertical-align: top;
 	width: 33%;
@@ -1030,36 +1038,60 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	box-sizing: border-box;
 }
 
-.page__contact__list__col dt {
+.page__frame__list__col dt {
 	font: 15px/30px 'DINPro_Bold';
 	letter-spacing: 2.3px;
 	color: #231f20;
 	margin-bottom: 5px;
 }
 
-.page__contact__list__col dd {
-	font: 16px/18px 'DINPro_Medium';
+.page__frame__list__col dd {
+	font-size: 16px;
 	color: #9d9d9d;
 }
 
-.page__contact__list__col a { color: #9d9d9d; text-decoration: none; }
-.page__contact__list__col a:hover { text-decoration: underline; }
+.page__frame__list__col a { color: #9d9d9d; text-decoration: none; }
+.page__frame__list__col a:hover { text-decoration: underline; }
 
 
 
-.page__contact__list .social li { margin-right: 10px; margin-left: 0; }
-.page__contact__list .social__item__link._facebook,
-.page__contact__list .social__item__link._twitter { background: #000000; }
+.page__frame__list .social li { margin-right: 10px; margin-left: 0; }
+.page__frame__list .social__item__link._facebook,
+.page__frame__list .social__item__link._twitter { background: #000000; }
 
 
-.page__contact__map {
+.page__frame hr {
+	display: block;
+	height: 2px;
+	margin: 14px 0 20px 0;
+	background: #ededed;
+	border: 0 none;
+}
+
+.page__frame ul { margin-top: 16px; }
+
+.page__frame ul > li {
 	position: relative;
-	margin: 0 -30px;
+	padding-left: 11px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+.page__frame ul > li:before {
+	content: '\002D';
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.page__frame__map {
+	position: relative;
+	margin: 0 -10px;
 	height: 343px;
 	overflow: hidden;
 }
 
-.page__contact__map > div {
+.page__frame__map > div {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1069,6 +1101,16 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
+
+
+.pageContact .page {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.pageContact .page__frame { padding-bottom: 0; }
+.pageContact .page__frame__list__col dd { font: 16px/18px 'DINPro_Medium'; }
+
 
 
 
@@ -1197,23 +1239,6 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 		left: 40px;
 		width: 48px;
 		height: 48px;
-	}
-
-	.about__content {
-		margin: 60px 0 46px 104px;
-	}
-	.about__content._text {
-		width: 65%;
-		max-width: 813px;
-	}
-
-	.about__content__col__item {
-		display: inline-block;
-		vertical-align: top;
-		width: 31%;
-		max-width: 354px;
-		padding-right: 40px;
-		margin-bottom: 0;
 	}
 
 }
@@ -1395,6 +1420,4 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	.panel-top__menu > li { margin-right: 54px; }
 
 	a.grid__col:hover .grid__in__frame__col__creator { display: block; }
-
-	.about__content { margin-left: 126px; }
 }
