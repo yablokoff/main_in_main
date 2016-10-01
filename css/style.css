@@ -74,7 +74,7 @@ body { font: 18px/30px 'DINPro', sans-serif;  color:#231f20; background:#ffffff;
 h1, h2, h3, h4, h5, h6 { margin:0; padding:0; font-weight: normal; }
 
 h1 {
-	font: 25px/25px 'DINPro_CondBold';
+	font: 50px/50px 'DINPro_CondBold';
 	color: #231f20;
 }
 
@@ -82,6 +82,7 @@ h2 {
 	font: 20px/30px 'DINPro_Bold';
 	text-transform: uppercase;
 	letter-spacing: 3.1px;
+	text-align: center;
 }
 
 img, fieldset { border:0 none; }
@@ -171,7 +172,7 @@ img, fieldset { border:0 none; }
 	left: 0;
 	width: 100%;
 	/*min-width: 990px;*/
-	height: 60px;
+	height: 82px;
 	z-index: 1000;
 	background: #ffffff;
 }
@@ -189,9 +190,9 @@ img, fieldset { border:0 none; }
 
 .panel-top__frame__door {
 	position: absolute;
-	top: 22px;
+	top: 25px;
 	left: 30px;
-	font: 12px 'DINPro_CondBold';
+	font-size: 12px;
 	letter-spacing: 1.8px;
 	color: #231f20;
 	text-transform: uppercase;
@@ -221,7 +222,7 @@ img, fieldset { border:0 none; }
 
 .panel-top__lang {
 	position: absolute;
-	top: 14px;
+	top: 25px;
 	right: 30px;
 	font-size: 12px;
 	letter-spacing: 1.8px;
@@ -244,16 +245,16 @@ img, fieldset { border:0 none; }
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 50px;
-	height: 50px;
-	margin: -25px 0 0 -25px;
+	width: 64px;
+	height: 64px;
+	margin: -32px 0 0 -32px;
 	cursor: pointer;
 }
 
 .panel-top__logo img {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 64px;
+	height: 64px;
 
 	position: absolute;
 	top: 0;
@@ -351,16 +352,43 @@ img, fieldset { border:0 none; }
 
 
 .page {
-	/*min-width: 990px;*/
 	min-height: 100%;
 	margin-bottom: -233px;
-	padding: 60px 0 233px 0;
+	padding: 82px 0 233px 0;
 	box-sizing: border-box;
 }
 .page__header {
 	position: relative;
 	padding: 47px 0 20px 0;
 }
+
+
+.page__header__logo {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	width: 48px;
+	height: 48px;
+	margin-top: -24px;
+	cursor: pointer;
+}
+
+.page__header__logo img {
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.page__header__logo:hover img {
+	animation: rotate 1.1s infinite linear 0.2s;
+}
+
+
 
 .page__header h1 {
 	text-align: center;
@@ -393,19 +421,19 @@ img, fieldset { border:0 none; }
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 86px;
+	height: 80px;
 	padding: 0;
 	background: #ffffff;
-	border-bottom: 1px solid #ebebeb;
+	/*border-bottom: 1px solid #ebebeb;*/
 	box-sizing: border-box;
 	z-index: 1000;
 }
 
 .page__header._active .arrow { display: none; }
 .page__header._active h1 {
-	font-size: 20px;
-	line-height: 20px;
-	padding: 20px 0 0 0;
+	font-size: 25px;
+	line-height: 25px;
+	padding-top: 10px;
 }
 .page__header._active .page__header__menu {
 	margin-top: 6px;
@@ -414,7 +442,7 @@ img, fieldset { border:0 none; }
 .page__header__progress {
 	display: none;
 	position: absolute;
-	top: 0;
+	bottom: -1px;
 	left: 0;
 	width: 100%;
 }
@@ -614,13 +642,13 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 
 .article__text {
 	position: relative;
-	margin: 50px 0 36px 0;
+	margin: 40px 0 26px 0;
 }
 
-.article__text__in { margin: 0 30px 0 60px; }
+.article__text__in { margin: 0 30px; }
 
 .article__text__tags {
-	margin: 20px 0 0 60px;
+	margin: 20px 0 0 30px;
 	color: #9d9d9d;
 }
 
@@ -632,9 +660,9 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 .article__text__tags a:hover { text-decoration: underline; }
 
 .article__text__tags dt {
-	font: 15px/30px 'DINPro_CondBold';
+	font: 15px/30px 'DINPro_Medium';
 	text-transform: uppercase;
-	letter-spacing: 2.3px;
+	letter-spacing: 1.9px;
 }
 
 .article__text__tags dd {
@@ -642,12 +670,13 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	line-height: 18px;
 }
 
-.article__text .social { margin: 30px 0 0 60px; }
+.article__text .social { margin: 30px 30px 0 30px; }
 
 .article__text .social li {
 	display: inline-block;
 	margin-right: 10px;
 }
+
 
 
 .article .anons { font: 23px/33px 'DINPro_Medium'; }
@@ -695,25 +724,26 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 .quote {
 	position: relative;
 	padding-left: 55px;
-	font: 16px/23px 'DINPro_Italic';
+	font: 16px/23px 'DINPro_Light';
 }
 
 .quote__img {
 	display: block;
 	position: absolute;
-	top: -6px;
-	left: -10px;
+	top: -3px;
+	left: 0;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 }
 
 .quote__signature {
-	font: 13px/20px 'DINPro';
-	text-align: right;
+	font: 16px/18px 'DINPro';
 	color: #9d9d9d;
-	margin-top: 14px;
+	margin-top: 20px;
 }
+.quote__signature span { font-size: 12px }
+
 
 
 .projects-list__header {
@@ -998,43 +1028,36 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 }
 
 .page__frame { margin: 0 10px; padding-bottom: 30px; }
-.page__frame h1,
-.page__frame h2 { text-align: center; }
-
-.page__frame h1 { margin-bottom: 40px; }
+.page__frame h1 { margin-bottom: 22px; text-align: center; }
 .page__frame h2 { margin-bottom: 26px; }
 
 
 .page__frame__text,
 .page__frame__list {
-	width: 62%;
-	max-width: 788px;
-	margin: 0 auto
+	margin: 0 30px;
 }
 
-.page__frame__text { margin-bottom: 80px; }
+.article__text .page__frame__list { margin-top: 30px; }
+
+.page__frame__text { margin-bottom: 46px; }
 
 .page__frame__list {
 	font-size: 0;
-	padding: 20px 0 43px 0;
+	padding: 20px 0 10px 0;
 	background: #fafafa;
 	box-sizing: border-box;
 }
 
-.page__frame__list._shiftup { position: relative; margin-top: -86px; }
+.page__frame__list._shiftup { margin-top: 30px; }
 
 .page__frame__list h2 {
-	text-align: center;
 	border-bottom: 2px solid #ededed;
-	padding-bottom: 16px;
-	margin-bottom: 26px;
+	padding: 0 20px 16px 20px;
+	margin-bottom: 14px;
 }
 
 .page__frame__list__col {
-	display: inline-block;
-	vertical-align: top;
-	width: 33%;
-	padding: 0 30px;
+	padding: 0 30px 11px 30px;
 	box-sizing: border-box;
 }
 
@@ -1055,7 +1078,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 
 
-.page__frame__list .social li { margin-right: 10px; margin-left: 0; }
+.page__frame__list .social li { margin-right: 10px; margin-left: 0; padding: 0; }
 .page__frame__list .social__item__link._facebook,
 .page__frame__list .social__item__link._twitter { background: #000000; }
 
@@ -1109,6 +1132,12 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 }
 
 .pageContact .page__frame { padding-bottom: 0; }
+.pageContact .page__frame__list {
+	margin-bottom: -30px;
+	position: relative;
+	z-index: 1;
+}
+.pageContact .page__frame__list__col { margin-bottom: 0; }
 .pageContact .page__frame__list__col dd { font: 16px/18px 'DINPro_Medium'; }
 
 
@@ -1149,11 +1178,16 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 }
 
 
+
+
+
+
+
+@media (min-width: 700px) {
+	.grid._col4 .grid__col { width: 25%; }
+}
+
 @media (min-width: 850px) {
-	h1 {
-		font-size: 50px;
-		line-height: 50px;
-	}
 
 	.page__header {
 		position: relative;
@@ -1168,23 +1202,25 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 	.page__header__menu li { margin: 0 27px; }
 
+	.page__header._active .page__header__logo { display: block; }
 	.page__header._active h1 {
 		font-size: 25px;
 		line-height: 25px;
 		text-align: left;
-		padding: 29px 0 0 30px;
+		padding: 25px 0 0 100px;
 	}
 	.page__header._active .page__header__menu {
 		position: absolute;
-		bottom: 27px;
+		bottom: 23px;
 		right: 0;
 		left: auto;
 	}
 
 	.article__text { margin: 60px 0 46px 0; }
 	.article__text__in {
-		width: 63%;
-		margin: 0 auto;
+		width: 62%;
+		max-width: 788px;
+		margin: 0 auto
 	}
 
 	.article .anons { font: 32px/48px 'DINPro_Medium'; }
@@ -1207,21 +1243,47 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 		margin: 0;
 	}
 
+	.article__text .page__frame__list { margin-top: 50px; }
+
+	.article__text__links {
+		width: 62%;
+		max-width: 788px;
+		margin: 50px auto 0 auto;
+	}
+	.article__text__links .social,
+	.article__text__links .article__text__tags {
+		position: static;
+		width: auto;
+	}
+
+	.article__text__links .social li {
+		display: inline-block;
+		margin: 0 20px 0 0;
+	}
+
+	.article__text__links .article__text__tags {
+		margin-top: 30px;
+		text-align: left;
+	}
+
+	.article__text__links .article__text__tags dt,
+	.article__text__links .article__text__tags dd {
+		display: inline-block;
+	}
+
+	.article__text__links .article__text__tags dt { margin-right: 15px; }
 
 	.quote {
 		font-size: 25px;
 		line-height: 32px;
-		padding-left: 122px;
+		padding-left: 112px;
 	}
 
 	.quote__img {
-		top: -6px;
-		left: -10px;
-		width: 102px;
-		height: 102px;
+		width: 75px;
+		height: 75px;
 	}
 
-	.quote__signature { line-height: 30px; }
 
 	.video:after {
 		width: 114px;
@@ -1241,10 +1303,6 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 		height: 48px;
 	}
 
-}
-
-@media (min-width: 700px) {
-	.grid._col4 .grid__col { width: 25%; }
 }
 
 
@@ -1412,6 +1470,34 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	}
 
 	.logos-list__item { width: 25%; }
+}
+
+@media (min-width: 990px) {
+	.page__frame h1 { margin-bottom: 40px; }
+
+	.page__frame__text,
+	.page__frame__list {
+		width: 62%;
+		max-width: 788px;
+		margin: 0 auto;
+	}
+	.page__frame__text { margin-bottom: 80px; }
+
+	.page__frame__list { padding-bottom: 30px; }
+
+	.page__frame__list h2 { margin-bottom: 26px; }
+	.page__frame__list__col {
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+	}
+
+	.pageContact .page__frame__list {
+		position: static;
+		margin-bottom: 0;
+	}
+
+	.page__frame__list._shiftup { position: relative; margin-top: -86px; }
 }
 
 
