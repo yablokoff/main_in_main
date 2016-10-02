@@ -82,7 +82,7 @@ $( function() {
 			});
 
 
-			if ($articleHeader.length) {
+			if ($articleHeader.length && $body.width() > 950 ) {
 
 				if (windowTop > articleHeaderOffset) {
 					$articleHeader.addClass(cssClassActive);

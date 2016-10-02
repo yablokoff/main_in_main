@@ -167,7 +167,7 @@ img, fieldset { border:0 none; }
 
 
 .panel-top {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -618,11 +618,9 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	font-size: 0;
 	bottom: 10px;
 	left: 10px;
-	width: 38px;
-	height: 38px;
-	background: #ffffff;
-	border: 3px solid #000000;
-	border-radius: 50%;
+	width: 45px;
+	height: 32px;
+	background: #000000;
 	z-index: 10;
 
 	opacity: 0;
@@ -637,7 +635,7 @@ a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 	margin: -9px 0 0 -14px;
 }
 
-.article__top._active { opacity: 1; }
+.article__top._active { opacity: 0.3; }
 
 
 .article__text {
@@ -1325,6 +1323,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	}
 
 	.panel-top {
+		position: absolute;
 		height: 123px;
 
 		transition: all 0.5s 0s;
