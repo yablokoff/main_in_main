@@ -60,7 +60,7 @@ $( function() {
 
 			$panelTop = $('.js-panel-top'),
 
-			top = 200,
+			top = $body.width() > 950 ? 200 : 100,
 			articleHeaderOffset = $articleHeader.length ? $articleHeader.offset().top : 0,
 
 			$progressBar = $('.js-progress-bar'),
