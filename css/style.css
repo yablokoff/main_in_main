@@ -180,10 +180,10 @@ img, fieldset { border:0 none; }
 .panel-top__frame__content {
 	display: none;
 	position: absolute;
-	top: 60px;
+	top: 82px;
 	left: 0;
 	right: 0;
-	padding: 98px 20px 30px 20px;
+	padding: 60px 20px 30px 20px;
 	text-align: center;
 	background: #ffffff;
 }
