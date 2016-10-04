@@ -263,7 +263,7 @@ img, fieldset { border:0 none; }
 .panel-top__menu ._isSubMenu._active ul { display: block; }
 .panel-top__menu li._active { color: #242021; }
 .panel-top__menu ._isSubMenu._active > div:before {
-	border-top-color: transparent;
+	border-top-color: transparent !important;
 	border-bottom-color: #242021;
 	margin-top: 0;
 }
@@ -272,6 +272,9 @@ img, fieldset { border:0 none; }
 	border-bottom-color: #ffffff;
 	margin-top: 2px;
 }
+
+.panel-top__menu ._isSubMenu:hover { color: #242021; }
+.panel-top__menu ._isSubMenu:hover > div:before { border-top-color: #242021; }
 
 
 .panel-top__lang {
@@ -1552,8 +1555,6 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 
 	.panel-top__menu ._isSubMenu:hover ul { display: block; }
-	.panel-top__menu ._isSubMenu:hover { color: #242021; }
-	.panel-top__menu ._isSubMenu:hover > div:before { border-top-color: #242021; }
 
 	.panel-top__brief {
 		position: absolute;
