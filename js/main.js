@@ -126,9 +126,11 @@ $( function() {
 	})();
 
 
-	//menu
+//menu
 	(function(){
-		var $menuBox = $(".js-frame");
+		var $menuBox = $(".js-frame"),
+			$popup = $('.js-popup')
+		;
 
 
 		$menuBox.on ("click", ".js-frame-door", (function(){
@@ -139,8 +141,24 @@ $( function() {
 			$door.attr("data-text", $door.text());
 			$door.text(text);
 			$box.toggleClass(cssClassActive);
+
+			if ($popup.is(":visible") && !$box.is("." + cssClassActive)) {
+				$popup.hide();
+			}
+
 		}));
 
+		$menuBox.on ("click", "._isSubMenu", (function(event){
+			if ($body.width() < 950) {
+				$(this).toggleClass(cssClassActive);
+			}
+
+			event.preventDefault();
+		}));
+
+		$window.resize(function() {
+			$menuBox.find("._isSubMenu").removeClass(cssClassActive);
+		});
 
 	})();
 

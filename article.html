@@ -27,7 +27,7 @@
 					<li><a href="#">ABOUT</a></li>
 					<li><a href="#">PROJECTS</a></li>
 					<li class="_isSubMenu">
-						<a href="#">MORE</a>
+						<div>MORE</div>
 						<ul>
 							<li><a href="#">more 1</a></li>
 							<li><a href="#">more 2</a></li>
@@ -365,34 +365,35 @@
 		</div>
 	</div>
 <!--popup-->
-	<div class="popup js-popup" data-popup="form-brief">
-		<div class="popup__frame">
-			<div class="popup__close js-popup-close" title="Close">Close</div>
-			<form action="#" class="form">
-				<div class="form__row _col2">
-					<div class="form__row__col"><input type="text" name="email" id="email" class="form__field" placeholder="E-MAIL" /></div>
-					<div class="form__row__col">
+<div class="popup js-popup" data-popup="form-brief">
+	<div class="popup__frame">
+		<div class="popup__close js-popup-close" title="Back"><span>Back</span></div>
+		<h2>SEND BRIEF</h2>
+		<form action="#" class="form">
+			<div class="form__row _col2">
+				<div class="form__row__col"><input type="text" name="email" id="email" class="form__field" placeholder="E-MAIL" /></div>
+				<div class="form__row__col">
 
-						<div class="form__file js-form-file">
-							<div class="form__file__btn">
-								<input type="file" class="form__file__btn__field js-form-file-input" name="file" id="file" />
-								<i class="form__file__btn__add">ATTACH</i>
-							</div>
-							<div class="form__file__name js-form-file-name" data-empty="ATTACH FILE">ATTACH FILE</div>
+					<div class="form__file js-form-file">
+						<div class="form__file__btn">
+							<input type="file" class="form__file__btn__field js-form-file-input" name="file" id="file" />
+							<i class="form__file__btn__ic">ATTACH</i>
 						</div>
-
+						<div class="form__file__name js-form-file-name" data-empty="ATTACH FILE">ATTACH FILE</div>
 					</div>
+
 				</div>
-				<div class="form__row"><textarea name="description" id="description" cols="30" rows="10" class="form__textarea" placeholder="WRITE SHORT DESCRIPTION"></textarea></div>
-				<div class="form__row _button">
-					<button type="submit" class="btn animate-button js-animate-button">
-						<span class="animate-button__text">SEND BRIEF</span>
-						<span class="animate-button__text__scale js-animate-button-scale"></span>
-					</button>
-				</div>
-			</form>
-		</div>
+			</div>
+			<div class="form__row"><textarea name="description" id="description" cols="30" rows="10" class="form__textarea" placeholder="Write short description"></textarea></div>
+			<div class="form__row _button">
+				<button type="submit" class="btn animate-button js-animate-button">
+					<span class="animate-button__text">SEND BRIEF</span>
+					<span class="animate-button__text__scale js-animate-button-scale"></span>
+				</button>
+			</div>
+		</form>
 	</div>
+</div>
 <!--/popup-->
 </body>
 </html>
