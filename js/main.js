@@ -1,6 +1,7 @@
 $( function() {
 	var $window = $(window),
 	 	$body = $('body'),
+		$bodyHtml = $('html, body'),
 
 		cssClassActive = "_active"
 	;
@@ -159,6 +160,34 @@ $( function() {
 		$window.resize(function() {
 			$menuBox.find("._isSubMenu").removeClass(cssClassActive);
 		});
+
+	})();
+
+//submenu
+	(function(){
+		var scrollSpeed = 500,
+			mySelector = 'data-slide',
+
+			$articleHeader = $('.js-scroll-header'),
+
+			menuActiveHeight = 80
+		;
+
+		$articleHeader.on ("click", ".js-scroll-header-menu-item", (function(event){
+			var hash = $(this).attr('href').split('#')[1],
+				goTo =  $("[" + mySelector + "='" + hash + "']"),
+				offset = goTo.offset().top - menuActiveHeight + 5
+			;
+
+
+			if (!$articleHeader.is("." + cssClassActive)) {
+				offset = offset -  $articleHeader.outerHeight();
+			}
+
+			$bodyHtml.stop().animate({ scrollTop: offset }, scrollSpeed);
+
+			event.preventDefault();
+		}));
 
 	})();
 

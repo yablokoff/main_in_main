@@ -184,6 +184,7 @@ img, fieldset { border:0 none; }
 	left: 0;
 	right: 0;
 	padding: 86px 30px 110px 30px;
+	text-align: center;
 	background: #ffffff;
 }
 
@@ -371,6 +372,7 @@ img, fieldset { border:0 none; }
 .social { font-size: 0; }
 
 .panel-top .social { margin-top: 85px; }
+.panel-top .social li { margin: 0 5px; }
 
 .social li {
 	display: inline-block;
@@ -504,7 +506,8 @@ img, fieldset { border:0 none; }
 	text-decoration: none;
 }
 
-.page__header__menu a:hover { color: #231f20; }
+.page__header__menu a:hover,
+.page__header__menu a._active{ color: #231f20; }
 
 .page__header._active {
 	position: fixed;
@@ -1143,6 +1146,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	position: relative;
 	top: 100px;
 	opacity: 0;
+	visibility: visible;
 
 	transition: top 0.4s 0s, opacity 1s 0s;
 }
@@ -1322,7 +1326,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 	.page__frame__map {
 		position: absolute;
-		top: 339px;
+		top: 379px;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -1474,6 +1478,8 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 		text-align: left;
 		padding: 0;
 	}
+
+	.panel-top .social li { margin: 0 0 0 10px; }
 
 	.panel-top {
 		height: 123px;
@@ -1723,7 +1729,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 	}
 	.form .btn .animate-button__text__scale { display: block; }
 
-	.page__frame__map { top: 380px; }
+	.page__frame__map { top: 420px; }
 }
 
 @media (min-width: 990px) {
@@ -1749,7 +1755,7 @@ textarea:focus:-ms-input-placeholder      {color: transparent !important;}
 
 	.page__frame__list._shiftup { position: relative; margin-top: -86px; }
 
-	.page__frame__map { top: 430px; }
+	.page__frame__map { top: 470px; }
 }
 
 
