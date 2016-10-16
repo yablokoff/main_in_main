@@ -675,6 +675,9 @@ a.grid__col:hover img {
 
 a.grid__col:hover .grid__in__frame__col__txt { display: block; }
 
+.grid__in__frame .btn { background: transparent; }
+
+
 
 
 .logos-list { font-size: 0; }
